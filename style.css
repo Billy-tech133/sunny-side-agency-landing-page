@@ -5,7 +5,7 @@
 /*variables*/
 :root {
     --Soft-red: hsl(7, 99%, 70%);
-    --Yellw: hsl(51, 100%, 49%);
+    --Yellow: hsl(51, 100%, 49%);
     --Dark-desaturated-cyan: hsl(167, 40%, 24%);
     --Dark-blue: hsl(198, 62%, 26%);
     --Dark-moderate-cyan: hsl(168, 34%, 41%);
@@ -33,6 +33,7 @@ body {
 }
 
 header {
+    position: relative;
     width: auto;
     height: 100%;
     background-image: url("/images/mobile/image-header.jpg");
@@ -74,6 +75,39 @@ a {
     color: var(--Very-dark-desaturated-blue);
     background-color: var(--White);
     border-radius: 50px;
+}
+.modal {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 12%;
+    bottom: auto;
+    height: 65%;
+    width: 85%;
+    background: var(--White);
+}
+.show-modal {
+    display: flex;
+}
+.modal > ul {
+    margin-right: 10%;
+    text-align: center;
+    list-style: none;
+}
+.modal-list {
+    margin-top: 50px;
+}
+.modal-list > a {
+    font-size: 24px;
+    color: var(--Dark-grayish-blue);
+}
+.btn-modal {
+    background: var(--Yellow);
+    padding: 25px 25px;
+    color: var(--Very-dark-desaturated-blue);
+    font-family: 'Fraunces', 'serif';
 }
 .middle-header {
     margin-top: 74px;
@@ -276,13 +310,11 @@ footer {
 .navi> ul {
     display: flex;
     list-style: none;
-    padding: 0;
+    justify-content: space-around;
 }
 .footer-navs {
     color: var(--Dark-desaturated-cyan);
     text-decoration: none;
-    margin: 0;
-    padding: 0;
 }
 .icons > svg {
     margin-left: 20px;
@@ -398,7 +430,7 @@ footer {
         font-size: 40px;
     }
     .arti-p {
-        margin: 0 30px;
+        margin: 0 100px;
     }
     p {
         font-size: 20px;
